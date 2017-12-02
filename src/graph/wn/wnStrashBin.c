@@ -77,8 +77,11 @@ Sh_Network_t * Wn_WindowStrashBinaryMiter( Sh_Manager_t * pMan, Wn_Window_t * pW
 
     // clean the data of the nodes in the window
     Ntk_NetworkForEachNodeSpecial( pWnd->pNet, pNode )
-        pNode->pCopy = (Ntk_Node_t *)pNode->pData = NULL;
-
+    {
+        pNode->pData = NULL;
+        pNode->pCopy = NULL;
+    }
+    
     // set the leaves
     pgInputs = Sh_ManagerReadVars( pMan );
     for ( i = 0; i < pWnd->nLeaves; i++ )

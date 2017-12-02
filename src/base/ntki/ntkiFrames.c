@@ -23,7 +23,7 @@
 ////////////////////////////////////////////////////////////////////////
 
 static void Ntk_NetworkAddFrame( Ntk_Network_t * pNetNew, Ntk_Network_t * pNet, int iFrame );
-static void Ntk_NetworkReorderCiCo( Ntk_Network_t * pNet );
+void Ntk_NetworkReorderCiCo( Ntk_Network_t * pNet );
 
 extern int  Ntk_NetworkVerifyVariables( Ntk_Network_t * pNet1, Ntk_Network_t * pNet2, int fVerbose );
 
