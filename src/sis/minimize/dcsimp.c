@@ -9,6 +9,7 @@
  */
 #include <stdio.h>
 #include "espresso.h"
+#include "ros.h"
 
 pcover dcsimp();
 static bool dc_special_cases();
@@ -17,11 +18,7 @@ int mydescend();
 void dc_simplify();
 bool is_orthagonal();
 pcover expand_to_largest();
-extern void init_ROS();
-extern void close_ROS();
-extern pcover get_ROS();
 
-pcover ROS;
 
 int	 DC_DEBUG= 1; /* if set to 1, verifies the final cover for correctness*/
 
